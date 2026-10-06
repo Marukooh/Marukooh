@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/banner.jpg" alt="Marukooh" width="100%">
+  <img src="assets/banner.jpg" alt="Maruko" width="100%">
 </p>
 
-<h1 align="center">Hey, I'm Marukooh 👋</h1>
+<h1 align="center">Hey, I'm Maruko 👋</h1>
 
 <p align="center">
   Software developer at <a href="https://github.com/AlmavivA">@AlmavivA</a> · Linux tinkerer · I build tools for the games I play
