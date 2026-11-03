@@ -53,7 +53,7 @@ I daily-drive **CachyOS + KDE Plasma 6** and patch whatever breaks along the way
 <img src="assets/title-playing.svg" alt="Currently playing" width="100%">
 
 <p align="center">
-  <img src="assets/playing.svg" alt="Warframe, Elite Dangerous, Crimson Desert, ACE COMBAT 8, AION 2, World of Warcraft" width="100%">
+  <img src="assets/playing.svg" alt="Warframe, Elite Dangerous, Crimson Desert, ACE COMBAT 8, World of Warcraft" width="100%">
 </p>
 
 <img src="assets/title-stats.svg" alt="Stats" width="100%">

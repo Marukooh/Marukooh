@@ -191,7 +191,7 @@ def card(name, title_text, desc, lang, tag, accent, delay):
   <rect class="run" x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14" fill="none" stroke="url(#edge)" stroke-width="3" filter="url(#blur)"/>
   <rect class="run" x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14" fill="none" stroke="url(#edge)" stroke-width="2"/>
   <g class="in">
-    <rect x="26" y="26" width="5" height="26" fill="{accent}" transform="skewX(-14)"/>
+    <rect x="0" y="0" width="5" height="26" fill="{accent}" transform="translate(30 26) skewX(-14)"/>
     <text x="44" y="47" font-family="{FONT}" font-weight="800" font-style="italic" font-size="27" fill="#ffffff">{esc(title_text)}</text>
     {desc_svg}
     <circle cx="32" cy="{h - 24}" r="6" fill="{lc}"/>
@@ -223,7 +223,7 @@ card("card-archons-eye.svg", "Archon's Eye",
 
 
 # ---------------------------------------------------------------- now playing ticker
-games = ["Warframe", "Elite Dangerous", "Crimson Desert", "ACE COMBAT 8", "AION 2", "World of Warcraft"]
+games = ["Warframe", "Elite Dangerous", "Crimson Desert", "ACE COMBAT 8", "World of Warcraft"]
 sep = "   ◆   "
 strip = sep.join(games) + sep
 tw = len(strip) * 11.2

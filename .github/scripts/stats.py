@@ -74,7 +74,7 @@ def main():
         y = 70 + i * 38
         rows.append(
             f'<g class="in" style="animation-delay:{0.15 * i:.2f}s">'
-            f'<rect x="40" y="{y - 14}" width="5" height="18" fill="{color}" transform="skewX(-14)"/>'
+            f'<rect x="0" y="0" width="5" height="18" fill="{color}" transform="translate(44 {y - 14}) skewX(-14)"/>'
             f'<text x="60" y="{y}" font-family="{font}" font-size="18" fill="#e6e3ff" fill-opacity="0.85">{html.escape(label)}</text>'
             f'<text x="540" y="{y}" text-anchor="end" font-family="{font}" font-size="20" font-weight="800" font-style="italic" fill="{color}">{value}</text>'
             f"</g>")

@@ -13,15 +13,15 @@
     </linearGradient>
     <clipPath id="c"><rect x="1" y="1" width="1198" height="62" rx="12"/></clipPath>
     <style>
-      .roll { animation: roll 24s linear infinite; }
-      @keyframes roll { from { transform: translateX(0) } to { transform: translateX(-1277px) } }
+      .roll { animation: roll 20s linear infinite; }
+      @keyframes roll { from { transform: translateX(0) } to { transform: translateX(-1131px) } }
       @media (prefers-reduced-motion: reduce) { * { animation: none !important } }
     </style>
   </defs>
   <rect x="1" y="1" width="1198" height="62" rx="12" fill="#0d0b1e" stroke="#2c2756" stroke-width="2"/>
   <g clip-path="url(#c)">
     <g class="roll">
-      <text x="20" y="40" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" fill="url(#t)" xml:space="preserve" letter-spacing="1">WARFRAME   ◆   ELITE DANGEROUS   ◆   CRIMSON DESERT   ◆   ACE COMBAT 8   ◆   AION 2   ◆   WORLD OF WARCRAFT   ◆   WARFRAME   ◆   ELITE DANGEROUS   ◆   CRIMSON DESERT   ◆   ACE COMBAT 8   ◆   AION 2   ◆   WORLD OF WARCRAFT   ◆   WARFRAME   ◆   ELITE DANGEROUS   ◆   CRIMSON DESERT   ◆   ACE COMBAT 8   ◆   AION 2   ◆   WORLD OF WARCRAFT   ◆   </text>
+      <text x="20" y="40" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" fill="url(#t)" xml:space="preserve" letter-spacing="1">WARFRAME   ◆   ELITE DANGEROUS   ◆   CRIMSON DESERT   ◆   ACE COMBAT 8   ◆   WORLD OF WARCRAFT   ◆   WARFRAME   ◆   ELITE DANGEROUS   ◆   CRIMSON DESERT   ◆   ACE COMBAT 8   ◆   WORLD OF WARCRAFT   ◆   WARFRAME   ◆   ELITE DANGEROUS   ◆   CRIMSON DESERT   ◆   ACE COMBAT 8   ◆   WORLD OF WARCRAFT   ◆   </text>
     </g>
     <rect width="1200" height="64" fill="url(#fade)"/>
   </g>

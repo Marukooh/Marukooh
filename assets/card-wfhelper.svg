@@ -29,7 +29,7 @@
   <rect class="run" x="1" y="1" width="588" height="184" rx="14" fill="none" stroke="url(#edge)" stroke-width="3" filter="url(#blur)"/>
   <rect class="run" x="1" y="1" width="588" height="184" rx="14" fill="none" stroke="url(#edge)" stroke-width="2"/>
   <g class="in">
-    <rect x="26" y="26" width="5" height="26" fill="#5ee6f7" transform="skewX(-14)"/>
+    <rect x="0" y="0" width="5" height="26" fill="#5ee6f7" transform="translate(30 26) skewX(-14)"/>
     <text x="44" y="47" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-weight="800" font-style="italic" font-size="27" fill="#ffffff">WFHelper</text>
     <text x="26" y="84" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-size="17" fill="#e6e3ff" fill-opacity="0.85">Desktop Warframe companion: inventory, relic reward</text><text x="26" y="107" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-size="17" fill="#e6e3ff" fill-opacity="0.85">scanner, warframe.market prices, mastery, foundry and</text><text x="26" y="130" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-size="17" fill="#e6e3ff" fill-opacity="0.85">world state.</text>
     <circle cx="32" cy="162" r="6" fill="#3178c6"/>
