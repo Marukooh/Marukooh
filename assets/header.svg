@@ -25,11 +25,6 @@
     <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
       <circle cx="3" cy="3" r="1" fill="#8f8cff" fill-opacity="0.35"/>
     </pattern>
-    <linearGradient id="mFill" x1="0" y1="0" x2="0.35" y2="1">
-      <stop offset="0" stop-color="#f05cf0"/>
-      <stop offset="0.45" stop-color="#b36cf2"/>
-      <stop offset="1" stop-color="#5ee6f7"/>
-    </linearGradient>
     <linearGradient id="textFill" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#f05cf0"/>
       <stop offset="0.5" stop-color="#b48cff"/>
@@ -68,6 +63,13 @@
       @keyframes fadeUp { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: translateY(0) } }
       @media (prefers-reduced-motion: reduce) { * { animation: none !important } }
     </style>
+    <linearGradient id="logoNebV" x1="0" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#f5b3ff"/><stop offset=".4" stop-color="#e040e8"/>
+    <stop offset=".75" stop-color="#9f7aff"/><stop offset="1" stop-color="#5ee0f5"/></linearGradient>
+    <filter id="logoNebtex" filterUnits="userSpaceOnUse" x="-200" y="-200" width="912" height="912">
+    <feTurbulence type="fractalNoise" baseFrequency="0.014 0.03" numOctaves="5" seed="21"/>
+    <feColorMatrix values="0 0 0 0 1  0 0 0 0 0.85  0 0 0 0 1  1.7 0 0 0 -0.8"/></filter>
+    <filter id="logoGlow" filterUnits="userSpaceOnUse" x="-200" y="-200" width="912" height="912"><feGaussianBlur stdDeviation="16"/></filter>
   </defs>
 
   <g clip-path="url(#frame)">
@@ -112,18 +114,19 @@
       <circle class="twinkle t3" cx="700" cy="290" r="1.4"/>
     </g>
 
-    <!-- M emblem -->
+    <!-- M emblem: identical to the avatar (marukooh-nebula-logo.svg) -->
     <g class="float">
-      <g transform="translate(240 66) skewX(-12)">
-        <text x="0" y="150" font-family="'Arial Black','Segoe UI Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="180" fill="#0b0918" stroke="#0b0918" stroke-width="22" stroke-linejoin="round" transform="translate(9 9)">M</text>
-        <text x="0" y="150" font-family="'Arial Black','Segoe UI Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="180" fill="url(#mFill)" stroke="#0b0918" stroke-width="10" stroke-linejoin="round" paint-order="stroke" filter="url(#glow)">M</text>
-        <g fill="#ffffff">
-          <circle class="twinkle" cx="52" cy="62" r="2"/>
-          <circle class="twinkle t3" cx="118" cy="40" r="1.6"/>
-          <circle class="twinkle t5" cx="150" cy="96" r="1.8"/>
-          <circle class="twinkle t2" cx="84" cy="118" r="1.3"/>
-        </g>
-      </g>
+      <g transform="translate(318 158) scale(0.70) scale(1.1) skewX(-14)">
+  <polygon points="-106,110 -106,-110 -44,-110 0,-26 44,-110 106,-110 106,110 52,110 52,-6 0,78 -52,-6 -52,110" fill="#e040e8" opacity=".55" filter="url(#logoGlow)"/>
+  <polygon transform="translate(12.7 12.7)" points="-106,110 -106,-110 -44,-110 0,-26 44,-110 106,-110 106,110 52,110 52,-6 0,78 -52,-6 -52,110" fill="#0c0b22"/>
+  <clipPath id="logoClip"><polygon points="-106,110 -106,-110 -44,-110 0,-26 44,-110 106,-110 106,110 52,110 52,-6 0,78 -52,-6 -52,110"/></clipPath>
+  <g clip-path="url(#logoClip)">
+    <rect x="-140" y="-120" width="280" height="240" fill="url(#logoNebV)"/>
+    <rect x="-140" y="-120" width="280" height="240" filter="url(#logoNebtex)" opacity=".5"/>
+    <circle cx="-93.1" cy="5.5" r="0.9" fill="#fff" opacity="0.44"/><circle cx="83.3" cy="2.0" r="0.5" fill="#fff" opacity="0.81"/><circle cx="-69.8" cy="91.5" r="1.2" fill="#fff" opacity="0.61"/><circle cx="-88.6" cy="103.5" r="1.2" fill="#fff" opacity="0.61"/><circle cx="59.1" cy="-19.3" r="1.2" fill="#fff" opacity="0.56"/><circle cx="88.5" cy="-114.6" r="0.9" fill="#fff" opacity="0.90"/><circle cx="-98.8" cy="98.1" r="0.5" fill="#fff" opacity="0.94"/><circle cx="-54.6" cy="-29.4" r="1.2" fill="#fff" opacity="0.60"/><circle cx="96.2" cy="-97.4" r="1.2" fill="#fff" opacity="0.84"/><circle cx="92.1" cy="-50.5" r="0.5" fill="#fff" opacity="0.89"/><circle cx="-55.7" cy="100.2" r="0.7" fill="#fff" opacity="0.98"/><circle cx="-16.6" cy="-42.4" r="0.9" fill="#fff" opacity="0.86"/><circle cx="-18.8" cy="-108.3" r="1.2" fill="#fff" opacity="0.94"/><circle cx="114.6" cy="11.3" r="0.5" fill="#fff" opacity="0.38"/><circle cx="60.4" cy="-11.3" r="0.7" fill="#fff" opacity="0.77"/><circle cx="-55.6" cy="-103.7" r="1.6" fill="#fff" opacity="0.43"/><circle cx="-7.2" cy="-36.0" r="0.9" fill="#fff" opacity="0.52"/><circle cx="62.1" cy="35.1" r="1.2" fill="#fff" opacity="0.78"/><circle cx="-51.8" cy="13.2" r="1.2" fill="#fff" opacity="0.43"/><circle cx="37.2" cy="-97.7" r="1.6" fill="#fff" opacity="0.94"/><circle cx="-0.8" cy="-64.4" r="0.9" fill="#fff" opacity="1.00"/><circle cx="-13.0" cy="-82.9" r="0.7" fill="#fff" opacity="0.51"/><circle cx="-84.6" cy="12.9" r="0.9" fill="#fff" opacity="0.51"/><circle cx="-62.8" cy="16.0" r="0.5" fill="#fff" opacity="0.84"/><circle cx="-22.7" cy="-19.8" r="1.6" fill="#fff" opacity="0.49"/><circle cx="-59.7" cy="58.0" r="1.2" fill="#fff" opacity="0.53"/><circle cx="121.6" cy="-86.0" r="1.6" fill="#fff" opacity="0.69"/><circle cx="75.5" cy="80.2" r="0.5" fill="#fff" opacity="0.53"/><circle cx="-65.4" cy="-23.1" r="1.2" fill="#fff" opacity="0.63"/><circle cx="-48.9" cy="72.3" r="0.5" fill="#fff" opacity="0.43"/><circle cx="-19.4" cy="60.6" r="1.2" fill="#fff" opacity="0.98"/><circle cx="-2.6" cy="-98.2" r="1.6" fill="#fff" opacity="0.91"/><circle cx="122.8" cy="-57.9" r="0.5" fill="#fff" opacity="0.50"/><circle cx="-90.5" cy="108.5" r="0.5" fill="#fff" opacity="0.96"/><circle cx="57.7" cy="33.9" r="1.2" fill="#fff" opacity="0.41"/><circle cx="72.0" cy="-114.7" r="0.7" fill="#fff" opacity="0.50"/><circle cx="109.2" cy="33.5" r="0.9" fill="#fff" opacity="0.98"/><circle cx="32.9" cy="6.5" r="1.2" fill="#fff" opacity="0.80"/><circle cx="-100.8" cy="-98.8" r="1.6" fill="#fff" opacity="0.96"/><circle cx="-80.2" cy="-55.0" r="1.6" fill="#fff" opacity="0.35"/><circle cx="9.7" cy="114.2" r="0.9" fill="#fff" opacity="0.97"/><circle cx="37.6" cy="88.3" r="1.2" fill="#fff" opacity="0.69"/><circle cx="12.2" cy="-108.3" r="1.2" fill="#fff" opacity="0.81"/><circle cx="-50.1" cy="-110.0" r="1.2" fill="#fff" opacity="0.93"/><circle cx="38.3" cy="-96.3" r="0.7" fill="#fff" opacity="0.78"/><circle cx="110.5" cy="-62.8" r="0.5" fill="#fff" opacity="0.80"/><circle cx="56.8" cy="-31.7" r="1.2" fill="#fff" opacity="0.48"/><circle cx="77.2" cy="55.0" r="1.6" fill="#fff" opacity="0.39"/><circle cx="-1.1" cy="-68.9" r="0.7" fill="#fff" opacity="0.50"/><circle cx="-72.4" cy="59.9" r="0.9" fill="#fff" opacity="0.42"/><circle cx="32.1" cy="25.3" r="0.7" fill="#fff" opacity="0.67"/><circle cx="106.7" cy="-102.0" r="1.6" fill="#fff" opacity="0.45"/><circle cx="-27.7" cy="-66.0" r="1.6" fill="#fff" opacity="0.44"/><circle cx="-116.5" cy="-101.2" r="1.2" fill="#fff" opacity="0.64"/><circle cx="55.1" cy="-42.7" r="0.5" fill="#fff" opacity="1.00"/><circle cx="112.2" cy="-39.3" r="0.7" fill="#fff" opacity="0.77"/><circle cx="6.4" cy="-7.4" r="0.9" fill="#fff" opacity="0.78"/><circle cx="-31.6" cy="-29.0" r="0.9" fill="#fff" opacity="0.64"/><circle cx="-101.7" cy="-97.0" r="0.5" fill="#fff" opacity="0.58"/><circle cx="118.4" cy="-86.5" r="0.7" fill="#fff" opacity="0.60"/><circle cx="69.9" cy="-44.0" r="1.2" fill="#fff" opacity="0.41"/><circle cx="53.4" cy="-70.0" r="1.6" fill="#fff" opacity="0.95"/><circle cx="-79.8" cy="-31.2" r="1.2" fill="#fff" opacity="0.37"/><circle cx="-23.2" cy="71.7" r="1.2" fill="#fff" opacity="0.38"/><circle cx="-120.9" cy="-100.6" r="0.5" fill="#fff" opacity="0.52"/><circle cx="64.3" cy="91.7" r="0.9" fill="#fff" opacity="0.59"/><circle cx="-42.9" cy="104.4" r="0.5" fill="#fff" opacity="0.52"/><circle cx="56.3" cy="-42.2" r="0.9" fill="#fff" opacity="0.54"/><circle cx="57.6" cy="22.0" r="0.5" fill="#fff" opacity="0.37"/><circle cx="-69.2" cy="-5.7" r="1.2" fill="#fff" opacity="0.97"/>
+  </g>
+  <polygon points="-106,110 -106,-110 -44,-110 0,-26 44,-110 106,-110 106,110 52,110 52,-6 0,78 -52,-6 -52,110" fill="none" stroke="#0c0b22" stroke-width="9"/>
+</g>
     </g>
 
     <!-- name + tagline: dark skewed plate + outlined text so it reads over the bright band -->
