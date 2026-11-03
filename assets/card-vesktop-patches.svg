@@ -13,9 +13,9 @@
     <clipPath id="clip"><rect x="1" y="1" width="588" height="184" rx="14"/></clipPath>
     <filter id="blur"><feGaussianBlur stdDeviation="2.5"/></filter>
     <style>
-      .run { stroke-dasharray: 160 1552; animation: run 5s linear infinite; animation-delay: 1.2s; }
+      .run { stroke-dasharray: 140 860; animation: run 5s linear infinite; animation-delay: -1.2s; }
       .in { animation: in .9s cubic-bezier(.2,.8,.2,1) both; animation-delay: 0.18s; }
-      @keyframes run { from { stroke-dashoffset: 0 } to { stroke-dashoffset: -1552 } }
+      @keyframes run { from { stroke-dashoffset: 0 } to { stroke-dashoffset: -1000 } }
       @keyframes in { from { opacity: 0; transform: translateX(-10px) } to { opacity: 1; transform: translateX(0) } }
       @media (prefers-reduced-motion: reduce) { * { animation: none !important } }
     </style>
@@ -26,8 +26,8 @@
     <line x1="260" y1="186" x2="420" y2="0" stroke="#f05cf0" stroke-opacity="0.5" stroke-width="2"/>
     <line x1="290" y1="186" x2="450" y2="0" stroke="#5ee6f7" stroke-opacity="0.5" stroke-width="3"/>
   </g>
-  <rect class="run" x="1" y="1" width="588" height="184" rx="14" fill="none" stroke="url(#edge)" stroke-width="3" filter="url(#blur)"/>
-  <rect class="run" x="1" y="1" width="588" height="184" rx="14" fill="none" stroke="url(#edge)" stroke-width="2"/>
+  <rect class="run" pathLength="1000" x="1" y="1" width="588" height="184" rx="14" fill="none" stroke="url(#edge)" stroke-width="3" filter="url(#blur)"/>
+  <rect class="run" pathLength="1000" x="1" y="1" width="588" height="184" rx="14" fill="none" stroke="url(#edge)" stroke-width="2"/>
   <g class="in">
     <rect x="0" y="0" width="5" height="26" fill="#f05cf0" transform="translate(30 26) skewX(-14)"/>
     <text x="44" y="47" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-weight="800" font-style="italic" font-size="27" fill="#ffffff">vesktop-patches</text>

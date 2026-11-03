@@ -175,9 +175,9 @@ def card(name, title_text, desc, lang, tag, accent, delay):
     <clipPath id="clip"><rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14"/></clipPath>
     <filter id="blur"><feGaussianBlur stdDeviation="2.5"/></filter>
     <style>
-      .run {{ stroke-dasharray: 160 {2 * (w + h)}; animation: run 5s linear infinite; animation-delay: {delay}s; }}
+      .run {{ stroke-dasharray: 140 860; animation: run 5s linear infinite; animation-delay: -{delay}s; }}
       .in {{ animation: in .9s cubic-bezier(.2,.8,.2,1) both; animation-delay: {delay * 0.15:.2f}s; }}
-      @keyframes run {{ from {{ stroke-dashoffset: 0 }} to {{ stroke-dashoffset: -{2 * (w + h)} }} }}
+      @keyframes run {{ from {{ stroke-dashoffset: 0 }} to {{ stroke-dashoffset: -1000 }} }}
       @keyframes in {{ from {{ opacity: 0; transform: translateX(-10px) }} to {{ opacity: 1; transform: translateX(0) }} }}
       {REDUCED}
     </style>
@@ -188,8 +188,8 @@ def card(name, title_text, desc, lang, tag, accent, delay):
     <line x1="{w - 330}" y1="{h}" x2="{w - 170}" y2="0" stroke="{PINK}" stroke-opacity="0.5" stroke-width="2"/>
     <line x1="{w - 300}" y1="{h}" x2="{w - 140}" y2="0" stroke="{CYAN}" stroke-opacity="0.5" stroke-width="3"/>
   </g>
-  <rect class="run" x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14" fill="none" stroke="url(#edge)" stroke-width="3" filter="url(#blur)"/>
-  <rect class="run" x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14" fill="none" stroke="url(#edge)" stroke-width="2"/>
+  <rect class="run" pathLength="1000" x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14" fill="none" stroke="url(#edge)" stroke-width="3" filter="url(#blur)"/>
+  <rect class="run" pathLength="1000" x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14" fill="none" stroke="url(#edge)" stroke-width="2"/>
   <g class="in">
     <rect x="0" y="0" width="5" height="26" fill="{accent}" transform="translate(30 26) skewX(-14)"/>
     <text x="44" y="47" font-family="{FONT}" font-weight="800" font-style="italic" font-size="27" fill="#ffffff">{esc(title_text)}</text>
