@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Maruko">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1530"/>
+      <stop offset="0.5" stop-color="#0d0b1e"/>
+      <stop offset="1" stop-color="#140c24"/>
+    </linearGradient>
+    <radialGradient id="glowRed" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#b3123d" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#b3123d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBlue" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2346c8" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#2346c8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6b4aa8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#6b4aa8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="band" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a2a8f" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#3a35b5" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#4b3fcf" stop-opacity="0.65"/>
+    </linearGradient>
+    <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1" fill="#8f8cff" fill-opacity="0.35"/>
+    </pattern>
+    <linearGradient id="mFill" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#f05cf0"/>
+      <stop offset="0.45" stop-color="#b36cf2"/>
+      <stop offset="1" stop-color="#5ee6f7"/>
+    </linearGradient>
+    <linearGradient id="textFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f05cf0"/>
+      <stop offset="0.5" stop-color="#b48cff"/>
+      <stop offset="1" stop-color="#5ee6f7"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-0.3 0; 0.3 0; -0.3 0" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="pulsePink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9cf7" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#ff9cf7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <clipPath id="frame"><rect width="1200" height="320" rx="18"/></clipPath>
+    <style>
+      .float { animation: float 6s ease-in-out infinite; transform-origin: 600px 150px; }
+      .breathe { animation: breathe 7s ease-in-out infinite; }
+      .breathe2 { animation: breathe 9s ease-in-out infinite reverse; }
+      .speed { animation: speed 3.2s linear infinite; }
+      .speed.s2 { animation-duration: 4.1s; animation-delay: -1.3s; }
+      .speed.s3 { animation-duration: 2.7s; animation-delay: -2.1s; }
+      .speed.s4 { animation-duration: 3.6s; animation-delay: -0.6s; }
+      .speed.s5 { animation-duration: 4.6s; animation-delay: -3s; }
+      .twinkle { animation: twinkle 2.4s ease-in-out infinite; }
+      .t2 { animation-delay: -0.8s; } .t3 { animation-delay: -1.6s; } .t4 { animation-delay: -0.4s; } .t5 { animation-delay: -2s; }
+      .sub { animation: fadeUp 1.2s ease-out both; animation-delay: 0.4s; }
+      @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+      @keyframes breathe { 0%,100% { opacity: 0.55 } 50% { opacity: 1 } }
+      @keyframes speed { 0% { transform: translate(-260px, 104px); opacity: 0 } 15% { opacity: 1 } 85% { opacity: 1 } 100% { transform: translate(260px, -104px); opacity: 0 } }
+      @keyframes twinkle { 0%,100% { opacity: 0.15 } 50% { opacity: 1 } }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: translateY(0) } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <ellipse class="breathe" cx="1010" cy="250" rx="300" ry="220" fill="url(#glowRed)"/>
+    <ellipse class="breathe2" cx="760" cy="330" rx="320" ry="170" fill="url(#glowBlue)"/>
+    <ellipse class="breathe" cx="170" cy="40" rx="300" ry="200" fill="url(#glowViolet)"/>
+
+    <!-- diagonal band -->
+    <g transform="rotate(-21.8 600 160)">
+      <rect x="-200" y="118" width="1600" height="92" fill="url(#band)"/>
+      <rect x="-200" y="118" width="1600" height="92" fill="url(#dots)"/>
+      <rect x="-200" y="110" width="1600" height="2.5" fill="#f3a6f3"/>
+      <rect x="-200" y="114.5" width="1600" height="1" fill="#c9c3ff" fill-opacity="0.6"/>
+      <rect x="-200" y="210" width="1600" height="5" fill="#53dff0"/>
+      <!-- light pulses running along the edges -->
+      <rect x="-200" y="109" width="220" height="4.5" fill="url(#pulsePink)" filter="url(#softGlow)">
+        <animate attributeName="x" from="-260" to="1460" dur="3.8s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-200" y="209" width="260" height="7" fill="url(#pulsePink)" filter="url(#softGlow)">
+        <animate attributeName="x" from="1460" to="-300" dur="5.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- speed lines -->
+    <g stroke="#e8e6ff" stroke-linecap="round" stroke-opacity="0.85">
+      <line class="speed" x1="300" y1="215" x2="410" y2="171" stroke-width="2.5"/>
+      <line class="speed s2" x1="250" y1="250" x2="330" y2="218" stroke-width="2"/>
+      <line class="speed s3" x1="820" y1="120" x2="930" y2="76" stroke-width="2.5"/>
+      <line class="speed s4" x1="880" y1="150" x2="960" y2="118" stroke-width="2"/>
+      <line class="speed s5" x1="560" y1="250" x2="650" y2="214" stroke-width="2"/>
+    </g>
+
+    <!-- stars -->
+    <g fill="#ffffff">
+      <circle class="twinkle" cx="140" cy="250" r="1.6"/>
+      <circle class="twinkle t2" cx="1080" cy="60" r="1.8"/>
+      <circle class="twinkle t3" cx="980" cy="30" r="1.2"/>
+      <circle class="twinkle t4" cx="60" cy="90" r="1.3"/>
+      <circle class="twinkle t5" cx="1140" cy="170" r="1.5"/>
+      <circle class="twinkle t2" cx="420" cy="40" r="1.2"/>
+      <circle class="twinkle t3" cx="700" cy="290" r="1.4"/>
+    </g>
+
+    <!-- M emblem -->
+    <g class="float">
+      <g transform="translate(240 66) skewX(-12)">
+        <text x="0" y="150" font-family="'Arial Black','Segoe UI Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="180" fill="#0b0918" stroke="#0b0918" stroke-width="22" stroke-linejoin="round" transform="translate(9 9)">M</text>
+        <text x="0" y="150" font-family="'Arial Black','Segoe UI Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="180" fill="url(#mFill)" stroke="#0b0918" stroke-width="10" stroke-linejoin="round" paint-order="stroke" filter="url(#glow)">M</text>
+        <g fill="#ffffff">
+          <circle class="twinkle" cx="52" cy="62" r="2"/>
+          <circle class="twinkle t3" cx="118" cy="40" r="1.6"/>
+          <circle class="twinkle t5" cx="150" cy="96" r="1.8"/>
+          <circle class="twinkle t2" cx="84" cy="118" r="1.3"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- name + tagline -->
+    <g transform="translate(500 0)">
+      <text x="0" y="150" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-weight="800" font-style="italic" font-size="64" fill="url(#textFill)" filter="url(#glow)">Maruko</text>
+      <g class="sub">
+        <text x="2" y="192" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-size="22" fill="#d9d6ff">Software developer · Linux tinkerer</text>
+        <text x="2" y="222" font-family="'Segoe UI','Ubuntu','Helvetica Neue',Arial,sans-serif" font-size="18" fill="#8fe9f5">I build tools for the games I play</text>
+      </g>
+    </g>
+  </g>
+</svg>
